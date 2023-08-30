@@ -18,17 +18,19 @@ const Wrapper = styled.a`
   width: 100%;
   text-decoration: none;
   min-height: 150px;
+  flex-grow:1;
 
   @media (min-width: ${breakpoints.sm}px) {
     font-size: 20px;
     line-height: 30px;
-    padding: 40px 40px 25px 40px;
+    padding: 40px 40px 25px 40px; 
     min-height: ${({ isLarge }) => (isLarge ? "262px" : "150px")};
-    max-width: ${({ isLarge }) => (isLarge ? "100%" : "calc(((100vw - 128px) / 2) - 10px)")};
-  }
+    flex-basis: ${({ isLarge }) => (isLarge ? "100%" : "49%")}; 
+    }
 
   @media (min-width: ${breakpoints.xl}px) {
     max-width: ${({ isLarge }) => (isLarge ? "788px" : "518px")};
+    flex-basis: auto;
   }
 `;
 

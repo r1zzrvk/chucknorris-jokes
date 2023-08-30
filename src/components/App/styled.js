@@ -16,6 +16,27 @@ const MainWrapper = styled.main`
   }
 `;
 
+const ListWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  @media (min-width: ${breakpoints.md}px) {
+    gap: 20px;
+  }
+`;
+
+const ButtonsWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+`;
+
 export const Styled = {
   MainWrapper,
+  ListWrapper,
+  ButtonsWrapper,
 };
