@@ -52,7 +52,7 @@ export const App = () => {
       </Styled.ListWrapper>
       {totalJokes <= 8 || (
         <Styled.ButtonsWrapper>
-          {page === 1 || <Button onClick={prevPage}>Prev</Button>}
+          {page === 1 || <Button onClick={prevPage} isOutline >Prev</Button>}
           {page === pages.length || <Button onClick={nextPage}>Next</Button>}
         </Styled.ButtonsWrapper>
       )}

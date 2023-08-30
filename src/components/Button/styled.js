@@ -1,12 +1,12 @@
-import { styled } from "styled-components"
-import { breakpoints, colors } from "../../constants/theme"
+import { styled } from "styled-components";
+import { breakpoints, colors } from "../../constants/theme";
 
 const Button = styled.button`
   border: 2px solid ${colors.primary};
-  background-color: ${colors.primary};
-  color: ${colors.white};
+  background-color: ${({ isOutline }) => isOutline ? colors.white : colors.primary};
+  color: ${({ isOutline }) => isOutline ? colors.primary : colors.white};
   width: 100%;
-  padding: 19px 30px;
+  padding: 17px 30px;
   font-size: 20px;
   line-height: normal;
   font-weight: 700;
@@ -15,18 +15,13 @@ const Button = styled.button`
   outline: none;
   cursor: pointer;
 
-  &:hover {
-    transition: all 0.3s ease-in;
-    background-color: ${colors.white};
-    color: ${colors.primary};
-  }
-
   @media (min-width: ${breakpoints.tablet}px) {
+    padding: 19px 30px;
     width: auto;
     min-width: 300px;
   }
-`
+`;
 
 export const Styled = {
   Button,
-}
+};
